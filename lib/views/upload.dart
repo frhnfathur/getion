@@ -37,8 +37,10 @@ class _UploadState extends State<Upload> {
               if (result == null) return;
               if (result.path == null) return;
 
-              var req = http.MultipartRequest('POST',
-                  Uri.parse('http://frhnfathur.pythonanywhere.com/deteksi'));
+              var req = http.MultipartRequest(
+                  'POST',
+                  Uri.parse(
+                      'https://3cc0-182-253-116-221.ap.ngrok.io/deteksi'));
               req.files.add(
                 http.MultipartFile(
                   'file',
